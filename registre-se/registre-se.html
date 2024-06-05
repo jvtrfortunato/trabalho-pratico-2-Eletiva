@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registre-se - Eventou</title>
+    <link rel="stylesheet" href="registre-se.css">
+</head>
+<body>
+    
+    <nav>
+        <section id="logo">
+            <img src="../imagens/eventou-logo.png" alt="">
+        </section>
+        <section id="opcoes-centro">
+            <h1>Explorar Eventos</h1> <!--COLOCAR OS LINKS AQUI-->
+            <h1 id="criar-evento">Criar Evento</h1>
+        </section>
+        <section id="entrar">
+            <a href="../login/login.html">Entrar</a>
+        </section>
+    </nav>
+
+    <section class="conteudo-principal">
+        <h1>Registre-se</h1>
+        <form>
+            <label>Nome completo</label>
+            <input type="text" placeholder="Digite seu nome completo" name="nome">
+            <label>CPF</label>
+            <input type="text" placeholder="000.000.000-00" name="cpf">
+            <label>Data de nascimento</label>
+            <input type="date" placeholder="dd/mm/aaaa" name="data-nascimento">
+            <label>Email</label>
+            <input type="email" placeholder="Digite seu email" name="email">
+            <label>Confirme seu email</label>
+            <input type="email" placeholder="Repita seu email" name="repita-email">
+            <label for="">Senha</label>
+            <input type="password" placeholder="Digite sua senha" name="senha">
+            <section class="termos-de-uso">
+                <input type="checkbox" class="checkbox">
+                <label class="checkbox-label">Eu aceito os <a href="" id="link-termos">Termos de Uso & Política de Privacidade</a></label>
+            </section>
+            <section class="termos-de-uso">
+                <input type="checkbox" class="checkbox">
+                <label class="checkbox-label">Quero receber novidades e informações de eventos próximos</label>
+            </section>
+            <button type="submit">Criar minha conta</button>
+            <section id="ultima-section">
+                <a href="">Já possui uma conta?</a> 
+            </section>
+        </form>
+    </section>
+
+</body>
+</html>
