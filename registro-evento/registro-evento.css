@@ -138,17 +138,3 @@ form > button:hover{
     font-size: 0.8em;
     margin-top: 1.5em;
 }
-
-#ultima-section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1.1em;
-    margin-bottom: 10em;
-}
-
-#ultima-section > a{
-    color: #52616b;
-    font-weight: 700;
-    font-size: 0.8em;
-}
