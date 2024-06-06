@@ -34,23 +34,15 @@ nav{
     width: 50%;
 }
 
-#opcoes-centro > h1{
+#opcoes-centro > a{
     color: #193441;
     font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-#opcoes-centro > h1:hover{
-    cursor: pointer;
+#opcoes-centro > a:hover{
     color: #5a5f63;
-}
-
-#opcoes-centro > #criar-evento{
-    color: #f26641;
-}
-
-#opcoes-centro > #criar-evento:hover{
-    color: #f6947a;
-    cursor: pointer;
 }
 
 #entrar{

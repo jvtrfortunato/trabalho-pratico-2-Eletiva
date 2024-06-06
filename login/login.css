@@ -34,23 +34,15 @@ nav{
     width: 50%;
 }
 
-#opcoes-centro > h1{
+#opcoes-centro > a{
     color: #193441;
     font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-#opcoes-centro > h1:hover{
-    cursor: pointer;
+#opcoes-centro > a:hover{
     color: #5a5f63;
-}
-
-#opcoes-centro > #criar-evento{
-    color: #f26641;
-}
-
-#opcoes-centro > #criar-evento:hover{
-    color: #f6947a;
-    cursor: pointer;
 }
 
 #entrar{
@@ -60,13 +52,14 @@ nav{
     width: 25%;
 }
 
-#entrar > h1{
+#entrar > a{
     color: #193441;
     font-size: 1.1em;
+    text-decoration: none;
+    font-weight: 700;
 }
 
-#entrar > h1:hover{
-    cursor: pointer;
+#entrar > a:hover{
     color: #5a5f63;
 }
 
@@ -80,27 +73,6 @@ nav{
 .conteudo-principal > h1{
     color: #193441;
     margin-bottom: 1em;
-}
-
-#entrar-facebook {
-    display: flex;
-    justify-content: center;
-    gap: 0.5em;
-    padding: 0.8em;
-    width: 15em;
-    background-color: #3b5998;
-    border-radius: 0.3em;
-    margin-bottom: 2em;
-}
-
-#entrar-facebook > img{
-    width: 1.8em;
-}
-
-#entrar-facebook > p{
-    color: #fff;
-    font-weight: 500;
-    font-size: 1.1em;
 }
 
 form{
