@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Cliente</title>
+    <link rel="stylesheet" href="registro-evento.css">
+</head>
+<body>
+    
+    <nav>
+        <section id="logo">
+            <img src="../imagens/eventou-logo.png" alt="">
+        </section>
+        <section id="opcoes-centro">
+            <a href="../explorar-eventos/explorar-eventos.html">Explorar Eventos</a> 
+            <a href="../registro-cliente/registre-se.html">Registrar Cliente</a>
+            <a href="../registro-organizador/registro-organizador.html">Registrar Organizador</a>
+            <a href="../registro-localizacao/registro-localizacao.html">Registrar Localização</a>
+            <a href="../registro-evento/registro-evento.html">Registrar Evento</a>
+        </section>
+        <section id="entrar">
+            <a href="../login/login.html">Entrar</a>
+        </section>
+    </nav>
+
+    <section class="conteudo-principal">
+        <h1>Evento</h1>
+        <form>
+            <label>Nome do evento</label>
+            <input type="text" placeholder="Digite o nome do evento" name="nome">
+            <label>Categoria</label>
+            <input type="text" placeholder="Ex: Workshop" name="categoria">
+            <label>Data</label>
+            <input type="date" name="data">
+            <label>Horário</label>
+            <input type="email" placeholder="--:--" name="horario">
+            <label>Localização</label>
+            <input type="email" name="localizacao">
+            <label for="">Organizador</label>
+            <input type="password" placeholder="Digite sua senha" name="organizador">
+            <button type="submit">Cadastrar</button>
+        </form>
+    </section>
+
+</body>
+</html>

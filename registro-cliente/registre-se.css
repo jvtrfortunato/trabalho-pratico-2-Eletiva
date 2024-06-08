@@ -72,7 +72,28 @@ nav{
 
 .conteudo-principal > h1{
     color: #193441;
-    margin-bottom: 1em;
+    margin-bottom: 2.5em;
+}
+
+#entrar-facebook {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    padding: 0.8em;
+    width: 15em;
+    background-color: #3b5998;
+    border-radius: 0.3em;
+    margin-bottom: 2em;
+}
+
+#entrar-facebook > img{
+    width: 1.8em;
+}
+
+#entrar-facebook > p{
+    color: #fff;
+    font-weight: 500;
+    font-size: 1.1em;
 }
 
 form{
@@ -111,39 +132,23 @@ form > button:hover{
     cursor: pointer;
 }
 
-#cadastre-se{
+.conteudo-principal > a{
+    color: #52616b;
+    font-weight: 700;
+    font-size: 0.8em;
+    margin-top: 1.5em;
+}
+
+#ultima-section{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1em;
-    padding: 1em;
-    margin-top: 0.5em;
+    margin-top: 1.1em;
+    margin-bottom: 10em;
 }
 
-#cadastre-se > p{
-    color: #193441;
-    font-size: 1.1em;
-    font-weight: 400;
-}
-
-#botao-cadastre-se{
-    border: 1px solid #ef4136;
-    padding: 0.5em;
-    border-radius: 0.3em;
-    text-decoration: none;
-    color: #ef4136;
-    font-weight: 500;
-    font-size: 1.1em;
-}
-
-#botao-cadastre-se:hover{
-    color: #fff;
-    background-color: #ef4136;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-
-.conteudo-principal > a{
+#ultima-section > a{
     color: #52616b;
-    font-weight: 500;
-    font-size: 1.1em;
+    font-weight: 700;
+    font-size: 0.8em;
 }
