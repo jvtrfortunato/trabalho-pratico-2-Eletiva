@@ -31,15 +31,24 @@ function inserirOrganizador($Nome, $Cpf, $dataNasc, $Telefone, $Cep, $Endereco, 
 
 // Cadastro Localização
 
-function inserirLocalizacao($NomeLocal, $Capacidade, $salaAuditorio, $metroQuadrado, $Cep, $Endereco, $Numero, $Complemento, $Bairro, $Estado, $Cidade){
+function inserirLocalizacao($nomeLocal, $Capacidade, $salaAuditorio, $metroQuadrado, $Cep, $Endereco, $Numero, $Complemento, $Bairro, $Estado, $Cidade){
 
   $conexao = conectarBD();
-  $consulta = "INSERT INTO localizacao (NomeLocal, Capacidade, salaAuditorio, metroQuadrado, Cep, Endereco, Numero, Complemento, Bairro, Estado, Cidade)
-               VALUES ('$NomeLocal', '$Capacidade', '$salaAuditorio', '$metroQuadrado', '$Cep' , '$Endereco', '$Numero', '$Complemento', '$Bairro', '$Estado', '$Cidade')";
+  $consulta = "INSERT INTO localizacao (nomeLocal, Capacidade, salaAuditorio, metroQuadrado, Cep, Endereco, Numero, Complemento, Bairro, Estado, Cidade)
+               VALUES ('$nomeLocal', '$Capacidade', '$salaAuditorio', '$metroQuadrado', '$Cep' , '$Endereco', '$Numero', '$Complemento', '$Bairro', '$Estado', '$Cidade')";
   mysqli_query($conexao,$consulta);
 
 }
 
+// Cadastro Evento
 
+function inserirEvento($nomeEvento, $categoria, $data, $horario, $localizacao, $senha){
+
+  $conexao = conectarBD();
+  $consulta = "INSERT INTO evento (nomeEvento, Categoria, dataEvento, Horario, Localizacao, Senha)
+               VALUES ('$nomeEvento', '$categoria', '$data', '$horario', '$localizacao' , '$senha')";
+  mysqli_query($conexao,$consulta);
+
+}
 
 ?> 

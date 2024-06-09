@@ -98,10 +98,10 @@ if  (!empty($_POST['inputNomeLocal']) &&
     !empty($_POST['inputEstado']) && 
     !empty($_POST['inputCidade'])) {
 
-    $NomeLocal = $_POST['inputNomeLocal'];
+    $nomeLocal = $_POST['inputnomeLocal'];
     $Capacidade = $_POST['inputCapacidade'];
-    $SalaAuditorio = $_POST['inputSalaAuditorio'];
-    $MetroQuadrado = $_POST['inputMetroQuadrado'];
+    $salaAuditorio = $_POST['inputsalaAuditorio'];
+    $metroQuadrado = $_POST['inputmetroQuadrado'];
     $Cep = $_POST['inputCep'];
     $Endereco = $_POST['inputEndereco'];
     $Numero = $_POST['inputNumero'];
@@ -110,7 +110,7 @@ if  (!empty($_POST['inputNomeLocal']) &&
     $Estado = $_POST['inputEstado'];
     $Cidade = $_POST['inputCidade'];
 
-    echo "Nome do Local: " . htmlspecialchars($NomeLocal) . "<br>";
+    echo "Nome do Local: " . htmlspecialchars($nomeLocal) . "<br>";
     echo "Capacidade " . htmlspecialchars($Capacidade) . "<br>";
     echo "Sala/Auditório " . htmlspecialchars($salaAuditorio) . "<br>";
     echo "Metros Quadrados:  " . htmlspecialchars($metroQuadrado) . "<br>";
@@ -122,9 +122,39 @@ if  (!empty($_POST['inputNomeLocal']) &&
     echo "Estado: " . htmlspecialchars($Estado) . "<br>";
     echo "Cidade: " . htmlspecialchars($Cidade) . "<br>";
 
-    inserirLocalizacao($NomeLocal, $Capacidade, $salaAuditorio, $metroQuadrado, $Cep, $Endereco, $Numero, $Complemento, $Bairro, $Estado, $Cidade);
+    inserirLocalizacao($nomeLocal, $Capacidade, $salaAuditorio, $metroQuadrado, $Cep, $Endereco, $Numero, $Complemento, $Bairro, $Estado, $Cidade);
 
     header('Location:../view/registro-localizacao.html');
+    die();
+}
+
+// Cadastro Evento
+
+if (!empty($_POST['inputnome-evento']) && 
+    !empty($_POST['inputcategoria']) && 
+    !empty($_POST['inputdata']) && 
+    !empty($_POST['inputhorario']) && 
+    !empty($_POST['inputlocalizacao']) && 
+    !empty($_POST['inputsenha'])) {
+
+    $nomeEvento = $_POST['inputnome-evento'];
+    $categoria = $_POST['inputcategoria'];
+    $data = $_POST['inputdata'];
+    $horario = $_POST['inputhorario'];
+    $localizacao = $_POST['inputlocalizacao'];
+    $senha = $_POST['inputsenha'];
+
+    echo "Nome: " . htmlspecialchars($nomeEvento) . "<br>";
+    echo "CPF: " . htmlspecialchars($categoria) . "<br>";
+    echo "Data de Nascimento: " . htmlspecialchars($data) . "<br>";
+    echo "Email: " . htmlspecialchars($horario) . "<br>";
+    echo "Confirmar Email: " . htmlspecialchars($localizacao) . "<br>";
+    echo "Senha: " . htmlspecialchars($senha) . "<br>";
+
+
+    inserirEvento($nomeEvento, $categoria, $data, $horario, $localizacao, $senha);
+
+    header('Location:../view/registro-evento.html');
     die();
 }
 
