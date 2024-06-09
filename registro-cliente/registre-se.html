@@ -13,7 +13,7 @@
             <img src="../imagens/eventou-logo.png" alt="">
         </section>
         <section id="opcoes-centro">
-            <a href="../inicio/inicio.html">Ínicio</a> 
+            <a href="../inicio/inicio.html">Início</a> 
             <a href="../registro-cliente/registre-se.html">Registrar Cliente</a>
             <a href="../registro-organizador/registro-organizador.html">Registrar Organizador</a>
             <a href="../registro-localizacao/registro-localizacao.html">Registrar Localização</a>
@@ -26,19 +26,19 @@
 
     <section class="conteudo-principal">
         <h1>Cliente</h1>
-        <form>
+        <form method="POST" action="../processamento/processamento.php">
             <label>Nome completo</label>
-            <input type="text" placeholder="Digite seu nome completo" name="nome">
+            <input type="text" placeholder="Digite seu nome completo" name="inputNome">
             <label>CPF</label>
-            <input type="text" placeholder="000.000.000-00" name="cpf">
+            <input type="text" placeholder="000.000.000-00" name="inputCpf">
             <label>Data de nascimento</label>
-            <input type="date" placeholder="dd/mm/aaaa" name="data-nascimento">
+            <input type="date" placeholder="dd/mm/aaaa" name="inputData-nascimento">
             <label>Email</label>
-            <input type="email" placeholder="Digite seu email" name="email">
+            <input type="email" placeholder="Digite seu email" name="inputEmail">
             <label>Confirme seu email</label>
-            <input type="email" placeholder="Repita seu email" name="repita-email">
+            <input type="email" placeholder="Repita seu email" name="inputRepita-email">
             <label for="">Senha</label>
-            <input type="password" placeholder="Digite sua senha" name="senha">
+            <input type="password" placeholder="Digite sua senha" name="inputSenha">
             <button type="submit">Criar minha conta</button>
             <section id="ultima-section">
                 <a href="../login/login.html">Já possui uma conta?</a> 
