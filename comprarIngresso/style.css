@@ -22,13 +22,13 @@ nav{
     align-items: center;
 }
 
-#logo > img{
+#logo > a > img{
     width: 9em;
+    margin-top: 0.5em;
 }
 
 #opcoes-centro{
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 2em;
     width: 50%;
@@ -65,6 +65,7 @@ nav{
     display: flex;
     justify-content: center;
     margin-top: 3em;
+    margin-bottom: 3em;
     gap: 2em;
 }
 
