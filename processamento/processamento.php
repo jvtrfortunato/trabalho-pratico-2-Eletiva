@@ -30,8 +30,6 @@ if (!empty($_POST['inputNome']) &&
 
     inserirCliente($nome, $cpf, $dataNasc, $email, $repitaEmail, $senha);
 
-    header('Location:../view/registre-se.html');
-    die();
 }
 
 
@@ -79,14 +77,12 @@ if (!empty($_POST['inputNome']) &&
 
     inserirOrganizador($Nome, $Cpf, $dataNasc, $Telefone, $Cep, $Endereco, $Numero, $Complemento, $Bairro, $Estado, $Cidade, $Senha);
 
-    header('Location:../view/registro-organizador.html');
-    die();
 }
 
 
 // Cadastro Localização
 
-if  (!empty($_POST['inputNomeLocal']) && 
+if  (!empty($_POST['inputnomeLocal']) && 
     !empty($_POST['inputCapacidade']) && 
     !empty($_POST['inputsalaAuditorio']) && 
     !empty($_POST['inputmetroQuadrado']) && 
@@ -124,8 +120,7 @@ if  (!empty($_POST['inputNomeLocal']) &&
 
     inserirLocalizacao($nomeLocal, $Capacidade, $salaAuditorio, $metroQuadrado, $Cep, $Endereco, $Numero, $Complemento, $Bairro, $Estado, $Cidade);
 
-    header('Location:../view/registro-localizacao.html');
-    die();
+
 }
 
 // Cadastro Evento
@@ -154,8 +149,6 @@ if (!empty($_POST['inputnome-evento']) &&
 
     inserirEvento($nomeEvento, $categoria, $data, $horario, $localizacao, $senha);
 
-    header('Location:../view/registro-evento.html');
-    die();
 }
 
 

@@ -45,22 +45,20 @@ nav{
     color: #5a5f63;
 }
 
-#entrar{
+#user{
     display: flex;
     justify-content: center;
     align-items: center;
     width: 25%;
 }
 
-#entrar > a{
-    color: #193441;
-    font-size: 1.1em;
-    text-decoration: none;
-    font-weight: 700;
+#user > img{
+    width: 2.2em;
+    height: 2.2em;
 }
 
-#entrar > a:hover{
-    color: #5a5f63;
+#user > img:hover{
+    cursor: pointer;
 }
 
 .conteudo-principal{

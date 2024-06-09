@@ -51,4 +51,34 @@ function inserirEvento($nomeEvento, $categoria, $data, $horario, $localizacao, $
 
 }
 
+// Retorno Clientes
+
+function retornarClientes(){
+
+  $conexao = conectarBD();
+  $consulta = "SELECT * FROM clientes";
+  $listaClientes = mysqli_query($conexao,$consulta);
+  return $listaClientes;
+}
+
+// Retorno Organização
+
+function retornarOrganizador(){
+
+  $conexao = conectarBD();
+  $consulta = "SELECT * FROM organizador";
+  $listaOrganizador = mysqli_query($conexao,$consulta);
+  return $listaOrganizador;
+}
+
+// Retorno Evento
+
+function retornarEvento(){
+
+  $conexao = conectarBD();
+  $consulta = "SELECT * FROM evento";
+  $listaEvento = mysqli_query($conexao,$consulta);
+  return $listaEvento;
+}
+
 ?> 
