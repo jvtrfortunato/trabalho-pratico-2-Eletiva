@@ -1,0 +1,4 @@
+https://github.com/jvtrfortunato/trabalho-pratico-2-Eletiva.git
+João Vitor Fortunato e Felipe Campos
+
+Importar o SQL (TEM QUE CRIAR A DATABASE "eventou" E IMPORTAR O SQL)
