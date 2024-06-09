@@ -1,3 +1,9 @@
+<?php
+
+    require "../processamento/funcoesBD.php"
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -108,6 +114,32 @@
                     <section class="dado"><p></p></section>
                     <section class="dado"><p></p></section>
                 </section>
+
+                <section class="conteudo-vizualizar">
+                    <section class="conteudo-vizualizar-box">
+                        <h1>Organizadores Cadastrados</h1>
+                        <?php
+                            $listaOrganizador = retornarOrganizador();
+                            while($organizador = mysqli_fetch_assoc($listaOrganizador)){
+                                echo "<section class=\"conteudo-bloco\">";
+                                echo "<h2>" . $organizador["Nome"] . " ". $organizador["CPF"] . "</h2>";
+                                echo "<p>Data Nascimento: " . $organizador["dataNascimento"] . "</p>";
+                                echo "<p>Telefone: " . $organizador["Telefone"] . "</p>";
+                                echo "<p>Cep: " . $organizador["CEP"] . "</p>"; 
+                                echo "<p>Endereço: " . $organizador["Endereco"] . "</p>";
+                                echo "<p>Número: " . $organizador["Numero"] . "</p>";
+                                echo "<p>Complemento: " . $organizador["Complemento"] . "</p>";
+                                echo "<p>Bairro: " . $organizador["Bairro"] . "</p>";
+                                echo "<p>Estado: " . $organizador["Estado"] . "</p>";
+                                echo "<p>Cidade: " . $organizador["Cidade"] . "</p>";
+                                echo "<p>Senha: " . $organizador["Senha"] . "</p>";
+                                echo "</section>";
+                            }
+                        ?>
+
+                    </section>
+                </section>
+
             </section>
         </section>
     

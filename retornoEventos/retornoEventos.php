@@ -1,10 +1,16 @@
+<?php
+
+    require "../processamento/funcoesBD.php"
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clientes Cadastrados</title>
-    <link rel="stylesheet" href="retornoClientes.css">
+    <title>Eventos Cadastrados</title>
+    <link rel="stylesheet" href="retornoEventos.css">
 </head>
 
 <body>
@@ -21,25 +27,28 @@
     <section id="div-pai">
         <section id="conteudo-principal">
             <section id="titulo">
-                <h2>Clientes Cadastrador</h2>
+                <h2>Eventos Cadastrador</h2>
             </section>
             <section class="tabela">
                 <!-- TITULO TABELA -->
                 <section class="titulo-tabela">
                     <section class="titulo-especifico-tabela">
-                        <p>Nome Completo</p>
+                        <p>Nome do evento</p>
                     </section>
                     <section class="titulo-especifico-tabela">
-                        <p>CPF</p>
+                        <p>Categoria</p>
                     </section>
                     <section class="titulo-especifico-tabela">
-                        <p>Data de Nascimento</p>
+                        <p>Data</p>
                     </section>
                     <section class="titulo-especifico-tabela">
-                        <p>Email</p>
+                        <p>Horário</p>
                     </section>
                     <section class="titulo-especifico-tabela">
-                        <p>Senha</p>
+                        <p>Localização</p>
+                    </section>
+                    <section class="titulo-especifico-tabela">
+                        <p>Organizador</p>
                     </section>
                 </section>
                 <!-- LINHA 1 -->
@@ -59,14 +68,18 @@
                     <section class="grupo-pequeno-linha">
                         <input type="tel" placeholder="Ex: DDD99999-9999">
                     </section>
+                    <section class="grupo-pequeno-linha">
+                        <input type="tel" placeholder="Ex: DDD99999-9999">
+                    </section>
                 </section>
                 <!-- LINHA 2 -->
                 <section class="linha-tabela">
                     <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>111.111.111-11</p></section>
-                    <section class="dado"><p>10/07/1999</p></section>
-                    <section class="dado"><p>Loremipsum@outlook.com</p></section>
-                    <section class="dado"><p>Loremipsum</p></section>
+                    <section class="dado"><p>Lorem ipsum</p></section>
+                    <section class="dado"><p>Lorem ipsum</p></section>
+                    <section class="dado"><p>Lorem ipsum</p></section>
+                    <section class="dado"><p>Lorem ipsum</p></section>
+                    <section class="dado"><p>Lorem ipsum</p></section>
                 </section>
                 <!-- LINHA 3 -->
                 <section class="linha-tabela">
@@ -75,7 +88,28 @@
                     <section class="dado"></section>
                     <section class="dado"></section>
                     <section class="dado"></section>
+                    <section class="dado"></section>
                 </section>
+
+                <section class="conteudo-vizualizar">
+                    <section class="conteudo-vizualizar-box">
+                        <h1>Eventos Cadastrados</h1>
+                        <?php
+                            $listaEvento = retornarEvento();
+                            while($evento = mysqli_fetch_assoc($listaEvento)){
+                                echo "<section class=\"conteudo-bloco\">";
+                                echo "<h2>" . $evento["ID"] . " ". $evento["nomeEvento"] . "</h2>";
+                                echo "<p>Categoria: " . $evento["Categoria"] . "</p>";
+                                echo "<p>Data Evento: " . $evento["dataEvento"] . "</p>";
+                                echo "<p>Horário: " . $evento["Horario"] . "</p>"; 
+                                echo "<p>Localização: " . $evento["Localizacao"] . "</p>";
+                                echo "<p>Senha: " . $evento["Senha"] . "</p>";
+                                echo "</section>";
+                            }
+                        ?>
+                    </section>
+                </section>
+
             </section>
         </section>
     </section>
