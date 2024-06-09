@@ -29,61 +29,61 @@
             <section id="organizador">
                 <h2>Organizador</h2>
             </section>
-            <form>
+            <form method="POST" action="../processamento/processamento.php">
                 <section class="form-linha">
                     <section class="grupo-linha1">
                         <label for="">Nome Completo</label>
-                        <input type="text" placeholder="Escreva seu nome completo">
+                        <input type="text" placeholder="Escreva seu nome completo" name="inputNome">
                     </section>
                     <section class="grupo-pequeno-linha1">
                         <label for="">CPF</label>
-                        <input type="text" placeholder="__.__.__-_">
+                        <input type="text" placeholder="__.__.__-_" name="inputCpf">
                     </section>
                     <section class="grupo-pequeno-linha1">
                         <label for="">Nascimento</label>
-                        <input type="date" placeholder="_/_/__">
+                        <input type="date" placeholder="_/_/__" name="inputData-nascimento">
                     </section>
                     <section class="grupo-pequeno-linha1">
                         <label for="">Celular</label>
-                        <input type="tel" placeholder="Ex: DDD99999-9999">
+                        <input type="tel" placeholder="Ex: DDD99999-9999" name="inputTelefone">
                     </section>
                 </section>
                 <section class="form-linha">
                     <section class="grupo-pequeno-linha2">
                         <label for="">CEP</label>
-                        <input type="text" placeholder="___-__">
+                        <input type="text" placeholder="___-__" name="inputCep">
                     </section>
                     <section class="grupo-grande-linha2">
                         <label for="">Endereço</label>
-                        <input type="text" placeholder="Ex: Avenida Paulista">
+                        <input type="text" placeholder="Ex: Avenida Paulista" name="inputEndereco">
                     </section>
                     <section class="grupo-pequeno-linha2">
                         <label for="">Número</label>
-                        <input type="text" placeholder="Ex: 1029">
+                        <input type="text" placeholder="Ex: 1029" name="inputNumero">
                     </section>
                     <section class="grupo-medio-linha2">
                         <label for="">Complemento</label>
-                        <input type="text" placeholder="Ex: Apartamento 120">
+                        <input type="text" placeholder="Ex: Apartamento 120" name="inputComplemento">
                     </section>
                 </section>
                 <section class="form-linha">
                     <section class="grupo-linha3">
                         <label for="">Bairro</label>
-                        <input type="text">
+                        <input type="text" name="inputBairro">
                     </section>
                     <section class="grupo-pequeno-linha3">
                         <label for="">Estado</label>
-                        <input type="text" placeholder="Ex: SP">
+                        <input type="text" placeholder="Ex: SP" name="inputEstado">
                     </section>
                     <section class="grupo-linha3">
                         <label for="">Cidade</label>
-                        <input type="text">
+                        <input type="text" name="inputCidade">
                     </section>
                 </section>
                 <section class="form-linha">
                     <section class="grupo-linha4">
                         <label for="">Senha</label>
-                        <input type="password" placeholder="Escreva sua senha">
+                        <input type="password" placeholder="Escreva sua senha" name="inputSenha">
                     </section>
                 </section>
                 <section id="form-linha-salvar">
