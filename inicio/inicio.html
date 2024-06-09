@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ínicio</title>
+
+    <!-- Swiper CSS -->
+     <link rel="stylesheet" href="../css/swiper-bundle.min.css">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="inicio.css">
 </head>
 <body>
@@ -24,19 +29,103 @@
         </section>
     </nav>
 
-    <section id="conteudo-principal">
-        <section id="section-cards">
-            <section class="card">
+    <section class="conteudo-principal">
+        <section class="slide-container swiper">
+            <section class="slide-content">
+                <section class="card-wrapper swiper-wrapper">
+                    <!-- CARD1 -->
+                    <section class="card swiper-slide">
+                        <section class="image-content">
+                            <span class="overlay"></span>
 
-            </section>
-            <section class="card">
+                            <section class="card-image">
+                                <img src="../imagens/almafestival.jpg" alt="" class="card-img">
+                            </section>
+                        </section>
 
+                        <section class="card-content">
+                            <h2 class="name">ALMA FESTIVAL 2024</h2>
+                            <section class="location">
+                                <p>Presidente Prudente, São Paulo</p>
+                                <p>7 de Junho de 2024</p>
+                            </section>
+
+                            <a class="button" href="../comprarIngresso/almaFestival.html">Comprar ingresso</a>
+                        </section>
+                    </section>
+                    <!-- CARD2 -->
+                    <section class="card swiper-slide">
+                        <section class="image-content">
+                            <span class="overlay"></span>
+
+                            <section class="card-image">
+                                <img src="../imagens/rap-game-go.jpg" alt="" class="card-img">
+                            </section>
+                        </section>
+
+                        <section class="card-content">
+                            <h2 class="name">RAP GAME FESTIVAL GO 2024</h2>
+                            <section class="location">
+                                <p>Presidente Prudente, São Paulo</p>
+                                <p>12 de Julho de 2024</p>
+                            </section>
+
+                            <a class="button">Comprar ingresso</a>
+                        </section>
+                    </section>
+                    <!-- CARD3 -->
+                    <section class="card swiper-slide">
+                        <section class="image-content">
+                            <span class="overlay"></span>
+
+                            <section class="card-image">
+                                <img src="../imagens/rapfestivalnocpx.jpg" alt="" class="card-img">
+                            </section>
+                        </section>
+
+                        <section class="card-content">
+                            <h2 class="name">RAP FESTIVAL NO CPX</h2>
+                            <section class="location">
+                                <p>Presidente Prudente, São Paulo</p>
+                                <p>2 de Agosto de 2024</p>
+                            </section>
+
+                            <a class="button">Comprar ingresso</a>
+                        </section>
+                    </section>
+                    <!-- CARD4 -->
+                    <section class="card swiper-slide">
+                        <section class="image-content">
+                            <span class="overlay"></span>
+
+                            <section class="card-image">
+                                <img src="../imagens/sensefestival.jpg" alt="" class="card-img">
+                            </section>
+                        </section>
+
+                        <section class="card-content">
+                            <h2 class="name">SENSE FESTIVAL 2024</h2>
+                            <section class="location">
+                                <p>Presidente Prudente, São Paulo</p>
+                                <p>10 de Dezembro de 2024</p>
+                            </section>
+
+                            <a class="button">Comprar ingresso</a>
+                        </section>
+                    </section>
+                </section>
             </section>
-            <section class="card">
-                
-            </section>
-        </section>
+
+            <div class="swiper-button-next swiper-navBtn"></div>
+            <div class="swiper-button-prev swiper-navBtn"></div>
+            <div class="swiper-pagination"></div>
     </section>
 
 </body>
+
+<!-- Swiper JS -->
+<script src="../js/swiper-bundle.min.js"></script>
+
+<!-- JavaScript -->
+<script src="../js/script.js"></script>
 </html>
