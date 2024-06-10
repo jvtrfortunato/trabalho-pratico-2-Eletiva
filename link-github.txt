@@ -1,0 +1,6 @@
+https://github.com/jvtrfortunato/trabalho-pratico-2-Eletiva.git
+
+Importar o SQL (TEM QUE CRIAR A DATABASE "eventou" E IMPORTAR O SQL "eventou.sql" NO PHPMYADMIN)
+
+
+João Vitor Fortunato e Felipe Campos

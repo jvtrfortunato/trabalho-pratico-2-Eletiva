@@ -68,27 +68,14 @@ nav{
     font-weight: 300;
 }
 
-.tabela{
-    width: 95%;
-}
-
-.titulo-tabela{
-    display: flex;
-    margin-bottom: 0.1em;
-    margin-left: 0.5em;
-}
-
-.titulo-especifico-tabela{
-    display: flex;
-    width: 20%;
-}
-
-.titulo-especifico-tabela > p{
-    font-size: 1.1em;
+.conteudo-vizualizar{
+    width: 100%;
 }
 
 .linha-tabela{
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
 }
 
 .dado{
@@ -96,8 +83,8 @@ nav{
     flex-direction: column;
     width: 20%;
     border: 1px solid #ccc;
-    height: 2em;
-    padding: 6px 12px;
+    height: auto;
+    padding: 10px;
     font-size: 1em;
     color: #555;
     border-radius: 0.1em;
@@ -106,19 +93,33 @@ nav{
 .dado > p{
     font-size: 1em;
     color: #555;
+    margin: 0;
 }
 
-.grupo-pequeno-linha{
-    display: flex;
-    flex-direction: column;
-    width: 20%;
+.ID {
+    font-weight: bold;
 }
 
-input{
-    border: 1px solid #ccc;
-    height: 2em;
-    padding: 6px 12px;
-    font-size: 1em;
-    color: #555;
-    border-radius: 0.1em;
+.nome {
+    text-align: start;
+}
+
+.categoria {
+    text-align: start;
+}
+
+.data {
+    text-align: start;
+}
+
+.horario {
+    text-align: start;
+}
+
+.localizacao {
+    text-align: start;
+}
+
+.senha {
+    text-align: start;
 }

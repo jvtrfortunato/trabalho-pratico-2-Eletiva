@@ -27,89 +27,26 @@
     <section id="div-pai">
         <section id="conteudo-principal">
             <section id="titulo">
-                <h2>Eventos Cadastrador</h2>
+                <h2>Eventos Cadastrados</h2>
             </section>
-            <section class="tabela">
-                <!-- TITULO TABELA -->
-                <section class="titulo-tabela">
-                    <section class="titulo-especifico-tabela">
-                        <p>Nome do evento</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Categoria</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Data</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Horário</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Localização</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Organizador</p>
-                    </section>
-                </section>
-                <!-- LINHA 1 -->
-                <section class="linha-tabela">
-                    <section class="grupo-pequeno-linha">
-                        <input type="text" placeholder="Escreva seu nome completo">
-                    </section>
-                    <section class="grupo-pequeno-linha">
-                        <input type="text" placeholder="__.__.__-_">
-                    </section>
-                    <section class="grupo-pequeno-linha">
-                        <input type="date" placeholder="_/_/__">
-                    </section>
-                    <section class="grupo-pequeno-linha">
-                        <input type="tel" placeholder="Ex: DDD99999-9999">
-                    </section>
-                    <section class="grupo-pequeno-linha">
-                        <input type="tel" placeholder="Ex: DDD99999-9999">
-                    </section>
-                    <section class="grupo-pequeno-linha">
-                        <input type="tel" placeholder="Ex: DDD99999-9999">
-                    </section>
-                </section>
-                <!-- LINHA 2 -->
-                <section class="linha-tabela">
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                </section>
-                <!-- LINHA 3 -->
-                <section class="linha-tabela">
-                    <section class="dado"></section>
-                    <section class="dado"></section>
-                    <section class="dado"></section>
-                    <section class="dado"></section>
-                    <section class="dado"></section>
-                    <section class="dado"></section>
-                </section>
-
-                <section class="conteudo-vizualizar">
+            <section class="conteudo-vizualizar">
                     <section class="conteudo-vizualizar-box">
-                        <h1>Eventos Cadastrados</h1>
-                        <?php
-                            $listaEvento = retornarEvento();
-                            while($evento = mysqli_fetch_assoc($listaEvento)){
-                                echo "<section class=\"conteudo-bloco\">";
-                                echo "<h2>" . $evento["ID"] . " ". $evento["nomeEvento"] . "</h2>";
-                                echo "<p>Categoria: " . $evento["Categoria"] . "</p>";
-                                echo "<p>Data Evento: " . $evento["dataEvento"] . "</p>";
-                                echo "<p>Horário: " . $evento["Horario"] . "</p>"; 
-                                echo "<p>Localização: " . $evento["Localizacao"] . "</p>";
-                                echo "<p>Senha: " . $evento["Senha"] . "</p>";
-                                echo "</section>";
-                            }
-                        ?>
+                <?php
+                    $listaEvento = retornarEvento();
+                    while($evento = mysqli_fetch_assoc($listaEvento)){
+                    echo "<section class=\"linha-tabela\">";
+                    echo "<section class=\"dado ID\"><p>ID:</p><p>" . $evento["ID"] . "</p></section>";
+                    echo "<section class=\"dado nome\"><p>Nome do Evento:</p><p>" . $evento["nomeEvento"] . "</p></section>";
+                    echo "<section class=\"dado categoria\"><p>Categoria:</p><p>" . $evento["Categoria"] . "</p></section>";
+                    echo "<section class=\"dado data\"><p>Data do Evento:</p><p>" . $evento["dataEvento"] . "</p></section>";
+                    echo "<section class=\"dado horario\"><p>Horário:</p><p>" . $evento["Horario"] . "</p></section>";
+                    echo "<section class=\"dado localizacao\"><p>Localização:</p><p>" . $evento["Localizacao"] . "</p></section>";
+                    echo "<section class=\"dado senha\"><p>Senha:</p><p>" . $evento["Senha"] . "</p></section>";
+                    echo "</section>";
+                     }
+                ?>
                     </section>
                 </section>
-
             </section>
         </section>
     </section>
