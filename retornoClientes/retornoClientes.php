@@ -27,79 +27,26 @@
     <section id="div-pai">
         <section id="conteudo-principal">
             <section id="titulo">
-                <h2>Clientes Cadastrador</h2>
+                <h2>Clientes Cadastrados</h2>
             </section>
-            <section class="tabela">
-                <!-- TITULO TABELA -->
-                <section class="titulo-tabela">
-                    <section class="titulo-especifico-tabela">
-                        <p>Nome Completo</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>CPF</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Data de Nascimento</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Email</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Senha</p>
-                    </section>
-                </section>
-                <!-- LINHA 1 -->
-                <section class="linha-tabela">
-                    <section class="grupo-pequeno-linha">
-                        <input type="text" placeholder="Escreva seu nome completo">
-                    </section>
-                    <section class="grupo-pequeno-linha">
-                        <input type="text" placeholder="__.__.__-_">
-                    </section>
-                    <section class="grupo-pequeno-linha">
-                        <input type="date" placeholder="_/_/__">
-                    </section>
-                    <section class="grupo-pequeno-linha">
-                        <input type="tel" placeholder="Ex: DDD99999-9999">
-                    </section>
-                    <section class="grupo-pequeno-linha">
-                        <input type="tel" placeholder="Ex: DDD99999-9999">
-                    </section>
-                </section>
-                <!-- LINHA 2 -->
-                <section class="linha-tabela">
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>111.111.111-11</p></section>
-                    <section class="dado"><p>10/07/1999</p></section>
-                    <section class="dado"><p>Loremipsum@outlook.com</p></section>
-                    <section class="dado"><p>Loremipsum</p></section>
-                </section>
-                <!-- LINHA 3 -->
-                <section class="linha-tabela">
-                    <section class="dado"></section>
-                    <section class="dado"></section>
-                    <section class="dado"></section>
-                    <section class="dado"></section>
-                    <section class="dado"></section>
-                </section>
 
                 <section class="conteudo-vizualizar">
                     <section class="conteudo-vizualizar-box">
-                        <h1>Clientes</h1>
-                        <?php
-                            $listaClientes = retornarClientes();
-                            while($clientes = mysqli_fetch_assoc($listaClientes)){
-                                echo "<section class=\"conteudo-bloco\">";
-                                echo "<h2>" . $clientes["Nome"] . " ". $clientes["CPF"] . "</h2>";
-                                echo "<p>Data Nascimento:" . $clientes["dataNascimento"] . "</p>";
-                                echo "<p>Email:" . $clientes["Email"] . "</p>";
-                                echo "<p>Confirmar Email: " . $clientes["confirmEmail"] . "</p>"; 
-                                echo "<p>Senha: " . $clientes["Senha"] . "</p>";
-                                echo "</section>";
-                            }
-                        ?>
+                <?php
+                    $listaClientes = retornarClientes();
+                    while($clientes = mysqli_fetch_assoc($listaClientes)){
+                    echo "<section class=\"linha-tabela\">";
+                    echo "<section class=\"dado nome\"><p>Nome Completo:</p><p>" . $clientes["Nome"] . "</p></section>";
+                    echo "<section class=\"dado cpf\"><p>CPF:</p><p>" . $clientes["CPF"] . "</p></section>";
+                    echo "<section class=\"dado data-nascimento\"><p>Data de Nascimento:</p><p>" . $clientes["dataNascimento"] . "</p></section>";
+                    echo "<section class=\"dado email\"><p>Email:</p><p>" . $clientes["Email"] . "</p></section>";
+                    echo "<section class=\"dado senha\"><p>Senha:</p><p>" . $clientes["Senha"] . "</p></section>";
+                    echo "</section>";
+                     }
+                ?>
                     </section>
                 </section>
+
 
             </section>
         </section>

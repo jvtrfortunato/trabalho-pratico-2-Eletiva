@@ -67,35 +67,23 @@ nav{
     font-weight: 300;
 }
 
-.tabela{
-    width: 98vw;
-}
-
-.titulo-tabela{
-    display: flex;
-    margin-bottom: 0.1em;
-    margin-left: 0.5em;
-}
-
-.titulo-especifico-tabela{
-    display: flex;
-    width: 10em;
-}
-
-.titulo-especifico-tabela > p{
-    font-size: 1.1em;
+.conteudo-vizualizar{
+    width: 110%;
 }
 
 .linha-tabela{
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
 }
 
 .dado{
     display: flex;
-    width: 10em;
+    flex-direction: column;
+    width: 20%;
     border: 1px solid #ccc;
-    height: 2em;
-    padding: 6px 12px;
+    height: auto;
+    padding: 10px;
     font-size: 1em;
     color: #555;
     border-radius: 0.1em;
@@ -104,18 +92,55 @@ nav{
 .dado > p{
     font-size: 1em;
     color: #555;
+    margin: 0;
 }
 
-.grupo-pequeno-linha{
-    display: flex;
-    width: 20%;
+.nome {
+    font-weight: normal;
 }
 
-input{
-    border: 1px solid #ccc;
-    height: 2em;
-    padding: 6px 12px;
-    font-size: 1em;
-    color: #555;
-    border-radius: 0.1em;
+.cpf {
+    text-align: start;
 }
+
+.data-nascimento {
+    text-align: start;
+}
+
+.telefone {
+    text-align: start;
+}
+
+.cep {
+    text-align: start;
+}
+
+.endereco {
+    text-align: start;
+}
+
+.numero {
+    text-align: start;
+}
+
+.complemento {
+    text-align: start;
+}
+
+.bairro {
+    text-align: start;
+}
+
+.estado {
+    text-align: start;
+}
+
+.cidade {
+    text-align: start;
+}
+
+.senha {
+    text-align: start;
+}
+
+

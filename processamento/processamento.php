@@ -32,7 +32,6 @@ if (!empty($_POST['inputNome']) &&
 
 }
 
-
 // Cadastro Organizador
 
 if (!empty($_POST['inputNome']) && 
@@ -92,7 +91,7 @@ if  (!empty($_POST['inputnomeLocal']) &&
     !empty($_POST['inputComplemento']) && 
     !empty($_POST['inputBairro']) && 
     !empty($_POST['inputEstado']) && 
-    !empty($_POST['inputCidade'])) {
+    !empty($_POST['inputnomeCidade'])) {
 
     $nomeLocal = $_POST['inputnomeLocal'];
     $Capacidade = $_POST['inputCapacidade'];
@@ -104,7 +103,7 @@ if  (!empty($_POST['inputnomeLocal']) &&
     $Complemento = $_POST['inputComplemento'];
     $Bairro = $_POST['inputBairro'];
     $Estado = $_POST['inputEstado'];
-    $Cidade = $_POST['inputCidade'];
+    $Cidade = $_POST['inputnomeCidade'];
 
     echo "Nome do Local: " . htmlspecialchars($nomeLocal) . "<br>";
     echo "Capacidade " . htmlspecialchars($Capacidade) . "<br>";
@@ -150,6 +149,5 @@ if (!empty($_POST['inputnome-evento']) &&
     inserirEvento($nomeEvento, $categoria, $data, $horario, $localizacao, $senha);
 
 }
-
 
 ?>

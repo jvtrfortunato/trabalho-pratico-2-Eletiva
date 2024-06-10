@@ -136,3 +136,24 @@ form > button:hover{
     font-size: 0.8em;
     margin-top: 1.5em;
 }
+
+.conteudo-principal > a{
+
+    color: white;
+}
+
+.botao-ver-eventos {
+    position: absolute;
+    top: 63em; 
+    right: 58em; 
+    padding: 0.625em 1.25em;
+    background-color: #52616b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.botao-ver-eventos:hover {
+    background-color: black;
+}

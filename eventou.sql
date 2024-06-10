@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 09/06/2024 às 23:07
+-- Tempo de geração: 10/06/2024 às 02:09
 -- Versão do servidor: 10.4.32-MariaDB
 -- Versão do PHP: 8.2.12
 
@@ -43,7 +43,8 @@ CREATE TABLE `clientes` (
 INSERT INTO `clientes` (`CPF`, `Nome`, `dataNascimento`, `Email`, `confirmEmail`, `Senha`) VALUES
 ('12345678910', 'jorjin', '2004-06-25', 'jorje@gmail.com', 'jorge@gmail.com', 'roblox123'),
 ('34565467812', 'brunin', '2002-02-02', 'claudio@gmail.com', 'claudio@gmail.com', 'prikito'),
-('12345678956', 'aqui', '3232-02-23', 'oloco@gmail.com', 'oloco@gmail.com', 'senha');
+('12345678956', 'aqui', '3232-02-23', 'oloco@gmail.com', 'oloco@gmail.com', 'senha'),
+('12367898732', 'Cancio', '2005-08-07', 'cancio@hotmail.com', 'cancio@hotmail.com', 'joaozin123');
 
 -- --------------------------------------------------------
 
@@ -66,7 +67,8 @@ CREATE TABLE `evento` (
 --
 
 INSERT INTO `evento` (`ID`, `nomeEvento`, `Categoria`, `dataEvento`, `Horario`, `Localizacao`, `Senha`) VALUES
-(6, 'Fejupi', 'Junina', '2024-06-26', '20:00:00', 'aqui do lado', 'dificil');
+(6, 'Fejupi', 'Junina', '2024-06-26', '20:00:00', 'aqui do lado', 'dificil'),
+(7, 'Festa do Branco', 'Festa', '2024-06-23', '22:00:00', 'Andrea Evento', 'senha');
 
 -- --------------------------------------------------------
 
@@ -94,7 +96,8 @@ CREATE TABLE `localizacao` (
 --
 
 INSERT INTO `localizacao` (`ID`, `nomeLocal`, `Capacidade`, `salaAuditorio`, `metroQuadrado`, `Cep`, `Endereco`, `Numero`, `Complemento`, `Bairro`, `Estado`, `Cidade`) VALUES
-(1, 'ali do lado', '100', 'lixao', 'poucos', 19024121, 'rua palmirinha', '666', 'Casa do marquinhos', 'Vila lider', 'Sólido', 'pp');
+(1, 'ali do lado', '100', 'lixao', 'poucos', 19024121, 'rua palmirinha', '666', 'Casa do marquinhos', 'Vila lider', 'Sólido', 'pp'),
+(2, 'teste', '200', 'salao', '500', 19024150, 'Avenida', '523', 'Casa', 'Cohab', 'São Paulo', 'prudente');
 
 -- --------------------------------------------------------
 
@@ -106,7 +109,7 @@ CREATE TABLE `organizador` (
   `Nome` varchar(255) DEFAULT NULL,
   `CPF` varchar(11) NOT NULL,
   `dataNascimento` date DEFAULT NULL,
-  `Telefone` int(13) DEFAULT NULL,
+  `Telefone` varchar(13) DEFAULT NULL,
   `CEP` int(8) DEFAULT NULL,
   `Endereco` varchar(255) DEFAULT NULL,
   `Numero` varchar(255) DEFAULT NULL,
@@ -122,7 +125,8 @@ CREATE TABLE `organizador` (
 --
 
 INSERT INTO `organizador` (`Nome`, `CPF`, `dataNascimento`, `Telefone`, `CEP`, `Endereco`, `Numero`, `Complemento`, `Bairro`, `Estado`, `Cidade`, `Senha`) VALUES
-('renatao', '12312312312', '0001-01-01', 345, 19024021, 'florzinha', '424', 'Casa', 'perigoso', 'Bem até entao', 'pequena', 'roblox123');
+('renatao', '12312312312', '0001-01-01', '32 998281522', 19024021, 'florzinha', '424', 'Casa', 'perigoso', 'Bem até entao', 'pequena', 'roblox123'),
+('Pedrin', '12345678956', '2000-09-28', '18 996058756', 19024150, 'Rua das palmeiras', '543', 'Casa', 'Jardim das Rosas', 'São Paulo', 'Presidente Prudente', 'qualquer');
 
 --
 -- Índices para tabelas despejadas
@@ -154,13 +158,13 @@ ALTER TABLE `organizador`
 -- AUTO_INCREMENT de tabela `evento`
 --
 ALTER TABLE `evento`
-  MODIFY `ID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de tabela `localizacao`
 --
 ALTER TABLE `localizacao`
-  MODIFY `ID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `ID` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -28,115 +28,29 @@
         <section id="conteudo-principal">
             <section id="titulo">
                 <h2>Organizadores Cadastrados</h2>
-            </section>
-            <section class="tabela">
-                <!-- TITULO TABELA -->
-                <section class="titulo-tabela">
-                    <section class="titulo-especifico-tabela">
-                        <p>Nome Completo</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>CPF</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Nascimento</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Celular</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>CEP</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Endereço</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Número</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Complemento</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Bairro</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Estado</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Cidade</p>
-                    </section>
-                    <section class="titulo-especifico-tabela">
-                        <p>Senha</p>
-                    </section>
-                </section>
-                <!-- LINHA 1 -->
-                <section class="linha-tabela">
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                </section>
-                <!-- LINHA 2 -->
-                <section class="linha-tabela">
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                    <section class="dado"><p>Lorem ipsum</p></section>
-                </section>
-                <!-- LINHA 3 -->
-                <section class="linha-tabela">
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                    <section class="dado"><p></p></section>
-                </section>
+            </section>          
 
                 <section class="conteudo-vizualizar">
                     <section class="conteudo-vizualizar-box">
-                        <h1>Organizadores Cadastrados</h1>
-                        <?php
-                            $listaOrganizador = retornarOrganizador();
-                            while($organizador = mysqli_fetch_assoc($listaOrganizador)){
-                                echo "<section class=\"conteudo-bloco\">";
-                                echo "<h2>" . $organizador["Nome"] . " ". $organizador["CPF"] . "</h2>";
-                                echo "<p>Data Nascimento: " . $organizador["dataNascimento"] . "</p>";
-                                echo "<p>Telefone: " . $organizador["Telefone"] . "</p>";
-                                echo "<p>Cep: " . $organizador["CEP"] . "</p>"; 
-                                echo "<p>Endereço: " . $organizador["Endereco"] . "</p>";
-                                echo "<p>Número: " . $organizador["Numero"] . "</p>";
-                                echo "<p>Complemento: " . $organizador["Complemento"] . "</p>";
-                                echo "<p>Bairro: " . $organizador["Bairro"] . "</p>";
-                                echo "<p>Estado: " . $organizador["Estado"] . "</p>";
-                                echo "<p>Cidade: " . $organizador["Cidade"] . "</p>";
-                                echo "<p>Senha: " . $organizador["Senha"] . "</p>";
-                                echo "</section>";
-                            }
-                        ?>
-
+                <?php
+                    $listaOrganizador = retornarOrganizador();
+                    while($organizador = mysqli_fetch_assoc($listaOrganizador)){
+                    echo "<section class=\"linha-tabela\">";
+                    echo "<section class=\"dado nome\"><p>Nome Completo:</p><p>" . $organizador["Nome"] . "</p></section>";
+                    echo "<section class=\"dado cpf\"><p>CPF:</p><p>" . $organizador["CPF"] . "</p></section>";
+                    echo "<section class=\"dado data-nascimento\"><p>Data de Nascimento:</p><p>" . $organizador["dataNascimento"] . "</p></section>";
+                    echo "<section class=\"dado telefone\"><p>Telefone:</p><p>" . $organizador["Telefone"] . "</p></section>";
+                    echo "<section class=\"dado cep\"><p>CEP:</p><p>" . $organizador["CEP"] . "</p></section>";
+                    echo "<section class=\"dado endereco\"><p>Endereco:</p><p>" . $organizador["Endereco"] . "</p></section>";
+                    echo "<section class=\"dado numero\"><p>Número:</p><p>" . $organizador["Numero"] . "</p></section>";
+                    echo "<section class=\"dado complemento\"><p>Complemento:</p><p>" . $organizador["Complemento"] . "</p></section>";
+                    echo "<section class=\"dado bairro\"><p>Bairro:</p><p>" . $organizador["Bairro"] . "</p></section>";
+                    echo "<section class=\"dado estado\"><p>Estado:</p><p>" . $organizador["Estado"] . "</p></section>";
+                    echo "<section class=\"dado cidade\"><p>Cidade:</p><p>" . $organizador["Cidade"] . "</p></section>";
+                    echo "<section class=\"dado senha\"><p>Senha:</p><p>" . $organizador["Senha"] . "</p></section>";
+                    echo "</section>";
+                     }
+                ?>
                     </section>
                 </section>
 

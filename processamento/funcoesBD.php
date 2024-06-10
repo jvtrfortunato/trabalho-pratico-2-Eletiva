@@ -71,6 +71,16 @@ function retornarOrganizador(){
   return $listaOrganizador;
 }
 
+// Retorno Localização
+
+function retornarLocalizacao(){
+
+  $conexao = conectarBD();
+  $consulta = "SELECT * FROM localizacao";
+  $listaLocalizacao = mysqli_query($conexao,$consulta);
+  return $listaLocalizacao;
+}
+
 // Retorno Evento
 
 function retornarEvento(){
